@@ -6,13 +6,39 @@ import { Component } from '@angular/core';
 
 })
 export class UsersComponent  {
-  name = 'Angular 2';
-  // items = ['item 1', 'item 2', 'item 3'];
+
+  // The easy way to build the object
+  item = {
+    name: "",
+    title: "",
+    email: "",
+    twitter: ""    
+  };
+
+  title = "";
+  name  = "";
+  email = "";
+  twitter = "";
+
+  saveTitle(){
+
+    // One way to build the object
+    // var anyObject = {
+    //   name: this.name,
+    //   email: this.email,
+    //   twitter: this.twitter
+    // }
+
+    // Editor error but it works
+    this.items.push(this.item);
+  };
+
+
   items = [
     {
       name: "John Smith",
       email: "me@carlitos.cc",
-      twitter: "@carlitos"
+      twitter: "@carlitos",
     },
     {
       name: "John Smith 2",
